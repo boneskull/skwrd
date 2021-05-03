@@ -1,0 +1,22 @@
+{
+  "name": "skwrd",
+  "version": "0.0.0",
+  "description": "",
+  "private": true,
+  "main": "skwrd.js",
+  "scripts": {
+    "start": "node skwrd.js"
+  },
+  "bin": {
+    "skwrd": "skwrd.js"
+  },
+  "keywords": [],
+  "author": "Christopher Hiller <boneskull@boneskull.com>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "chromedriver": "^90.0.0",
+    "dotenv": "^8.2.0",
+    "wdio-chromedriver-service": "^7.0.0",
+    "webdriverio": "^7.5.3"
+  }
+}
