@@ -40,21 +40,18 @@ if (!USERNAME || !PASSWORD) {
   await browser.switchWindow('Family Access');
 
   console.error('Checking dashboard...');
-  try {
-    await browser.$('svg.wellnessPass');
+  if (await (await browser.$('svg.wellnessPass')).isExisting()) {
     console.error('Form already submitted');
-  } catch (ignored) {
+  } else {
     await (await browser.$('#bSaveWS')).click();
     await browser.pause(2000);
-    try {
-      await browser.$('svg.wellnessPass');
+    if (await (await browser.$('svg.wellnessPass')).isExisting()) {
       console.error('Attested successfully');
-    } catch (err) {
+    } else {
       console.error('Failed to submit form!');
-      console.error(err);
       process.exitCode = 1;
     }
-  } finally {
-    browser.deleteSession();
   }
+
+  await browser.deleteSession();
 })();

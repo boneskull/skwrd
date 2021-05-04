@@ -30,7 +30,7 @@
 
     > `Failed to submit form!`
 
-    ...and a stacktrace. And the process will exit with code 1.
+    ...and the process will exit with code 1.
 
 ## You might consider...
 
