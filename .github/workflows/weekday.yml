@@ -25,7 +25,10 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.5
         with:
-          node-version: 16.x        
+          node-version: 16.x
+      
+      - name: Install
+        uses: bahmutov/npm-install@v1.6.0
 
       # Runs a single command using the runners shell
       - name: Run skwrd
