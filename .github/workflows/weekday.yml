@@ -33,3 +33,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run skwrd
         run: ./skwrd.js
+        env:
+          SKWRD_USERNAME: ${{ secrets.SKWRD_USERNAME }}
+          SKWRD_PASSWORD: ${{ secrets.SKWRD_PASSWORD }}
+          
