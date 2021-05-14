@@ -41,14 +41,14 @@ if (!USERNAME || !PASSWORD) {
 
   console.error('Checking dashboard...');
   if (await (await browser.$('svg.wellnessPass')).isExisting()) {
-    console.error('Form already submitted');
+    console.log('Form already submitted');
   } else {
     await (await browser.$('#bSaveWS')).click();
     await browser.pause(2000);
     if (await (await browser.$('svg.wellnessPass')).isExisting()) {
-      console.error('Attested successfully');
+      console.log('Attested successfully');
     } else {
-      console.error('Failed to submit form!');
+      console.log('Failed to submit form!');
       process.exitCode = 1;
     }
   }
